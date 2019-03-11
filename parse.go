@@ -30,110 +30,109 @@ func Parse(data []byte) (*USDLData, error) {
 
 			code := getCode(line)
 			value := getValue(line)
-			field := getField(code)
 
-			if field != "" {
-				switch field {
-				case "jurisdictionVehicleClass":
+			if code != "" {
+				switch code {
+				case "DCA":
 					usdlData.JurisdictionVehicleClass = value
-				case "jurisdictionRestrictionCodes":
+				case "DCB":
 					usdlData.JurisdictionRestrictionCodes = value
-				case "jurisdictionEndorsementCodes":
+				case "DCD":
 					usdlData.JurisdictionEndorsementCodes = value
-				case "dateOfExpiry":
+				case "DBA":
 					usdlData.DateOfExpiry = getDate(value)
-				case "lastName":
+				case "DCS":
 					usdlData.LastName = value
-				case "firstName":
+				case "DAC":
 					usdlData.FirstName = value
-				case "middleName":
+				case "DAD":
 					usdlData.MiddleName = value
-				case "dateOfIssue":
+				case "DBD":
 					usdlData.DateOfIssue = getDate(value)
-				case "dateOfBirth":
+				case "DBB":
 					usdlData.DateOfBirth = getDate(value)
-				case "sex":
+				case "DBC":
 					usdlData.Sex = getSex(value)
-				case "eyeColor":
+				case "DAY":
 					usdlData.EyeColor = value
-				case "height":
+				case "DAU":
 					usdlData.HeightIn = getHeight(value, 0)
 					usdlData.HeightCm = getHeight(value, 1)
-				case "addressStreet":
+				case "DAG":
 					usdlData.AddressStreet = value
-				case "addressCity":
+				case "DAI":
 					usdlData.AddressCity = value
-				case "addressState":
+				case "DAJ":
 					usdlData.AddressState = value
-				case "addressPostalCode":
+				case "DAK":
 					usdlData.AddressPostalCode = value
-				case "documentNumber":
+				case "DAQ":
 					usdlData.DocumentNumber = value
-				case "documentDiscriminator":
+				case "DCF":
 					usdlData.DocumentDiscriminator = value
-				case "issuer":
+				case "DCG":
 					usdlData.Issuer = value
-				case "lastNameTruncated":
+				case "DDE":
 					usdlData.LastNameTruncated = value
-				case "firstNameTruncated":
+				case "DDF":
 					usdlData.FirstNameTruncated = value
-				case "middleNameTruncated":
+				case "DDG":
 					usdlData.MiddleNameTruncated = value
-				case "hairColor":
+				case "DAZ":
 					usdlData.HairColor = value
-				case "addressStreet2":
+				case "DAH":
 					usdlData.AddressStreet2 = value
-				case "placeOfBirth":
+				case "DCI":
 					usdlData.PlaceOfBirth = value
-				case "auditInformation":
+				case "DCJ":
 					usdlData.AuditInformation = value
-				case "inventoryControlNumber":
+				case "DCK":
 					usdlData.InventoryControlNumber = value
-				case "otherLastName":
+				case "DBN":
 					usdlData.OtherLastName = value
-				case "otherFirstName":
+				case "DBG":
 					usdlData.OtherFirstName = value
-				case "otherSuffixName":
+				case "DBS":
 					usdlData.OtherSuffixName = value
-				case "nameSuffix":
+				case "DCU":
 					usdlData.NameSuffix = value
-				case "weightRange":
+				case "DCE":
 					usdlData.WeightRange = getWightRange(value)
-				case "race":
+				case "DCL":
 					usdlData.Race = value
-				case "standardVehicleClassification":
+				case "DCM":
 					usdlData.StandardVehicleClassification = value
-				case "standardEndorsementCode":
+				case "DCN":
 					usdlData.StandardEndorsementCode = value
-				case "standardRestrictionCode":
+				case "DCO":
 					usdlData.StandardRestrictionCode = value
-				case "jurisdictionVehicleClassificationDescription":
+				case "DCP":
 					usdlData.JurisdictionVehicleClassificationDescription = value
-				case "jurisdictionEndorsementCodeDescription":
+				case "DCQ":
 					usdlData.JurisdictionEndorsementCodeDescription = value
-				case "jurisdictionRestrictionCodeDescription":
+				case "DCR":
 					usdlData.JurisdictionRestrictionCodeDescription = value
-				case "complianceType":
+				case "DDA":
 					usdlData.ComplianceType = value
-				case "dateCardRevised":
+				case "DDB":
 					usdlData.DateCardRevised = getDate(value)
-				case "dateOfExpiryHazmatEndorsement":
+				case "DDC":
 					usdlData.DateOfExpiryHazmatEndorsement = getDate(value)
-				case "limitedDurationDocumentIndicator":
+				case "DDD":
 					usdlData.LimitedDurationDocumentIndicator = getBool(value)
-				case "weightLb":
+				case "DAW":
 					usdlData.WeightLb = getInt(value)
-				case "weightKg":
+				case "DAX":
 					usdlData.WeightKg = getInt(value)
-				case "dateAge18":
+				case "DDH":
 					usdlData.DateAge18 = getDate(value)
-				case "dateAge19":
+				case "DDI":
 					usdlData.DateAge19 = getDate(value)
-				case "dateAge21":
+				case "DDJ":
 					usdlData.DateAge21 = getDate(value)
-				case "organDonor":
+				case "DDK":
 					usdlData.OrganDonor = getBool(value)
-				case "veteran":
+				case "DDL":
 					usdlData.Veteran = getBool(value)
 				}
 			}
@@ -162,13 +161,6 @@ func getCode(line string) string {
 
 func getValue(line string) string {
 	return line[3:]
-}
-
-func getField(code string) string {
-	if field, ok := codeToField[code]; ok {
-		return field
-	}
-	return ""
 }
 
 func getSex(value string) string {
