@@ -1,5 +1,8 @@
 package gousdl
 
+// USDL Barcode parser from standard
+// https://www.aamva.org/2016CardDesignStandard/
+
 import (
 	"fmt"
 	"regexp"
@@ -12,10 +15,12 @@ import (
 
 const lineSeparator = "\n"
 
+// ParseString takes a string of ID/License barcode data and returns the parsed data
 func ParseString(data string) (*USDLData, error) {
 	return Parse([]byte(data))
 }
 
+// Parse takes a byte array of ID/License barcode data and returns the parsed data
 func Parse(data []byte) (*USDLData, error) {
 	rawLines := strings.Split(strings.TrimSpace(string(data)), lineSeparator)
 	lines := sanitizeData(rawLines)
