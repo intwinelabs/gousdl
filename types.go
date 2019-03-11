@@ -1,0 +1,55 @@
+package gousdl
+
+type USDLData struct {
+	JurisdictionVehicleClass                     string
+	JurisdictionRestrictionCodes                 string
+	JurisdictionEndorsementCodes                 string
+	DateOfExpiry                                 int64
+	LastName                                     string
+	FirstName                                    string
+	MiddleName                                   string
+	DateOfIssue                                  int64
+	DateOfBirth                                  int64
+	Sex                                          string
+	EyeColor                                     string
+	HeightIn                                     int
+	HeightCm                                     int
+	AddressStreet                                string
+	AddressCity                                  string
+	AddressState                                 string
+	AddressPostalCode                            string
+	DocumentNumber                               string
+	DocumentDiscriminator                        string
+	Issuer                                       string
+	LastNameTruncated                            string
+	FirstNameTruncated                           string
+	MiddleNameTruncated                          string
+	AddressStreet2                               string
+	HairColor                                    string
+	PlaceOfBirth                                 string
+	AuditInformation                             string
+	InventoryControlNumber                       string
+	OtherLastName                                string
+	OtherFirstName                               string
+	OtherSuffixName                              string
+	NameSuffix                                   string
+	WeightRange                                  string
+	Race                                         string
+	StandardVehicleClassification                string
+	StandardEndorsementCode                      string
+	StandardRestrictionCode                      string
+	JurisdictionVehicleClassificationDescription string
+	JurisdictionEndorsementCodeDescription       string
+	JurisdictionRestrictionCodeDescription       string
+	ComplianceType                               string
+	DateCardRevised                              int64
+	DateOfExpiryHazmatEndorsement                int64
+	LimitedDurationDocumentIndicator             bool
+	WeightLb                                     int
+	WeightKg                                     int
+	DateAge18                                    int64
+	DateAge19                                    int64
+	DateAge21                                    int64
+	OrganDonor                                   bool
+	Veteran                                      bool
+}
