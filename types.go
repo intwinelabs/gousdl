@@ -1,6 +1,7 @@
 package gousdl
 
 type USDLData struct {
+	Hash                                         string
 	JurisdictionVehicleClass                     string
 	JurisdictionRestrictionCodes                 string
 	JurisdictionEndorsementCodes                 string

@@ -43,6 +43,7 @@ DDD1
 ZVZVA01`
 
 	sampleStruct := &USDLData{
+		Hash:                          "c521a5f8d4de9abc451c833971e202672020c3cb2b825d8e671310d7e57f2ac4",
 		JurisdictionVehicleClass:      "D",
 		JurisdictionRestrictionCodes:  "K",
 		JurisdictionEndorsementCodes:  "PH",

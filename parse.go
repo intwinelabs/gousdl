@@ -1,10 +1,13 @@
 package gousdl
 
 import (
+	"fmt"
 	"regexp"
 	"strconv"
 	"strings"
 	"time"
+
+	"golang.org/x/crypto/blake2b"
 )
 
 const lineSeparator = "\n"
@@ -19,6 +22,9 @@ func Parse(data []byte) (*USDLData, error) {
 	started := false
 
 	usdlData := &USDLData{}
+
+	h := blake2b.Sum256(data)
+	usdlData.Hash = fmt.Sprintf("%x", h)
 
 	for _, line := range lines {
 		if !started {
