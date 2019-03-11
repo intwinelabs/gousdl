@@ -26,6 +26,7 @@ DBD06062016
 DBB06061986
 DBA12102024
 DBC1
+DAQ485723A48750328947502398745
 DAU068 IN
 DAYBRO
 DAG2300 WEST BROAD STREET
@@ -35,15 +36,35 @@ DAK232690000
 DCF2424244747474786102204
 DCGUSA
 DAW240
+DAZBRN
+DAHUNIT 202
+DCISPAIN
+DCJ3456789
+DBNHENDRIX
+DBGJIMI
+DBSJR
+DCE3
+DCLWHITE
+DCMC
+DCOC
+DCPFOO
+DCQFOO
+DCRFOO
 DCK123456789
 DDAF
+DAX12
+DDH06062002
+DDI06062003
+DDJ06062007
+DDK1
+DDL1
 DDB06062008
 DDC06062009
 DDD1
 ZVZVA01`
 
 	sampleStruct := &USDLData{
-		Hash:                          "c521a5f8d4de9abc451c833971e202672020c3cb2b825d8e671310d7e57f2ac4",
+		Hash:                          "baeb91fe5f52fa73936743436cc482e2115a8f8565c76ca5a19fdc828175338c",
 		JurisdictionVehicleClass:      "D",
 		JurisdictionRestrictionCodes:  "K",
 		JurisdictionEndorsementCodes:  "PH",
@@ -61,40 +82,41 @@ ZVZVA01`
 		AddressCity:                   "RICHMOND",
 		AddressState:                  "VA",
 		AddressPostalCode:             "232690000",
-		DocumentNumber:                "",
+		DocumentNumber:                "485723A48750328947502398745",
 		DocumentDiscriminator:         "2424244747474786102204",
 		Issuer:                        "USA",
 		LastNameTruncated:             "N",
 		FirstNameTruncated:            "N",
 		MiddleNameTruncated:           "N",
-		AddressStreet2:                "",
-		HairColor:                     "",
-		PlaceOfBirth:                  "",
-		AuditInformation:              "",
+		AddressStreet2:                "UNIT 202",
+		HairColor:                     "BRN",
+		PlaceOfBirth:                  "SPAIN",
+		AuditInformation:              "3456789",
 		InventoryControlNumber:        "123456789",
-		OtherLastName:                 "",
-		OtherFirstName:                "",
-		OtherSuffixName:               "",
+		OtherLastName:                 "HENDRIX",
+		OtherFirstName:                "JIMI",
+		OtherSuffixName:               "JR",
 		NameSuffix:                    "JR",
-		WeightRange:                   "",
-		Race:                          "",
-		StandardVehicleClassification: "",
+		WeightRange:                   "60 - 70 kg (131  160 lbs)",
+		Race:                          "WHITE",
+		StandardVehicleClassification: "C",
 		StandardEndorsementCode:       "",
-		StandardRestrictionCode:       "",
-		JurisdictionVehicleClassificationDescription: "",
-		JurisdictionEndorsementCodeDescription:       "",
-		JurisdictionRestrictionCodeDescription:       "",
+		StandardRestrictionCode:       "C",
+		JurisdictionVehicleClassificationDescription: "FOO",
+		JurisdictionEndorsementCodeDescription:       "FOO",
+		JurisdictionRestrictionCodeDescription:       "FOO",
 		ComplianceType:                               "F",
 		DateCardRevised:                              1212710400,
 		DateOfExpiryHazmatEndorsement:                1244246400,
 		LimitedDurationDocumentIndicator:             true,
 		WeightLb:                                     240,
-		WeightKg:                                     0,
-		DateAge18:                                    0,
-		DateAge19:                                    0,
-		DateAge21:                                    0,
-		OrganDonor:                                   false,
-		Veteran:                                      false}
+		WeightKg:                                     12,
+		DateAge18:                                    1023321600,
+		DateAge19:                                    1054857600,
+		DateAge21:                                    1181088000,
+		OrganDonor:                                   true,
+		Veteran:                                      true,
+	}
 
 	usdlData, err := ParseString(sampleData)
 	assert.Nil(err)
