@@ -33,12 +33,11 @@ func Parse(data []byte) (*USDLData, error) {
 
 	for _, line := range lines {
 		if !started {
-			if strings.Index(line, "ANSI ") == 0 {
+			if strings.Index(line, "ANSI ") > -1 {
 				started = true
 			}
 			continue
 		} else {
-
 			code := getCode(line)
 			value := getValue(line)
 

@@ -11,7 +11,8 @@ func TestParse(t *testing.T) {
 	assert := assert.New(t)
 	require := require.New(t)
 
-	sampleData := `ANSI 636000090002DL00410278ZV03190008DLDAQT64235789L
+	sampleData := `@
+ANSI 636000090002DL00410278ZV03190008DLDAQT64235789L
 DCSSAMPLE
 DDEN
 DACMICHAEL
@@ -64,7 +65,7 @@ DDD1
 ZVZVA01`
 
 	sampleStruct := &USDLData{
-		Hash:                          "baeb91fe5f52fa73936743436cc482e2115a8f8565c76ca5a19fdc828175338c",
+		Hash:                          "24ed0a142a8f9d1d0206c35530e2c1c2a8c90daea52ba44e79be5fdaa50cc261",
 		JurisdictionVehicleClass:      "D",
 		JurisdictionRestrictionCodes:  "K",
 		JurisdictionEndorsementCodes:  "PH",
